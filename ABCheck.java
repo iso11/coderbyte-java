@@ -9,24 +9,24 @@ import java.io.*;
 class ABCheck {  
   String ABCheck(String str) { 
 	  
-	  String flag = "false";
+	  String flag = "false"; 
 	  
 	  //전체를 돌면서 a가 나오면 -4이랑 +4이 b인지 판단  빈칸포함 
 	  for(int i=0;i<str.length();i++)
 	  {
 		if(str.charAt(i)=='a')
-			if(i>=4&&i<str.length()-4)
+			if(i>=4&&i<str.length()-4)	
 			{
 				if(str.charAt(i-4)=='b'||str.charAt(i+4)=='b')
 					flag="true";
 			}
-			else if(i<4&&str.charAt(i+4)=='b')
+			else if(i<4&&str.charAt(i+4)=='b')	//배열인덱스 벗어나는것 방지
 				flag="true";	
-			else if(i>=str.length()-4&&str.charAt(i-4)=='b')
+			else if(i>=str.length()-4&&str.charAt(i-4)=='b')// 배열인덱스 벗어나는거 방지.
 				flag="true";				
 	  }
 	  
-    return flag;
+    return flag;	
     
   } 
   
