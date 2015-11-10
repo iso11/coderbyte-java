@@ -8,12 +8,12 @@ import java.io.*;
 
 class Palindrome {  
   String Palindrome(String str) { 
-	  str=str.replaceAll(" ","");
+	  str=str.replaceAll(" ","");	//빈칸 없애기 
 	  String flag="true";
 	  
 	  for(int i=0;i<str.length()/2;i++)
 	  {
-		  if(str.charAt(i)!=str.charAt(str.length()-1-i))
+		  if(str.charAt(i)!=str.charAt(str.length()-1-i))	//반접어서 비교하는방식.
 			  flag="false";
 	  }	  
     return flag;    
